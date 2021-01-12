@@ -13,7 +13,7 @@ module.exports.run = async (client, message, args) => {
     .addField("Gewarned door:", message.author)
     .addField("Reden:", mReason)
     .setColor("#004b96")
-    .setFooter("OpenRP", client.user.displayAvatarURL())
+    .setFooter("MinecraftGamers", client.user.displayAvatarURL())
     .setTimestamp();
 
     message.delete();
