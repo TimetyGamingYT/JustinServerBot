@@ -1,0 +1,26 @@
+{
+  "name": "vhbot",
+  "version": "1.0.0",
+  "description": "MinecraftGamers - discord.js bot",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rhydium/VHBot.git"
+  },
+  "author": "MinecraftGamers",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/Rhydium/VHBot/issues"
+  },
+  "homepage": "https://github.com/Rhydium/VHBot#readme",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "discord.js": "^12.3.1",
+    "ms": "^2.1.2",
+    "nodemon": "^2.0.4"
+  }
+}
