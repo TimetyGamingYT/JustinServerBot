@@ -24,20 +24,12 @@ client.on('ready', () => {
   console.log(`Ingelogd als ${client.user.tag}!`);
 });
 
-client.on('guildMemberAdd', member => {
-    const channel = member.guild.channels.cache.find(ch => ch.name === '《👋》welkom');
-    if (!channel) return console.log('Er is iemand nieuws gejoined, maar het #join-log kanaal is niet aanwezig dus er is geen welkomstbericht verstuurd.');
+client.on('guildMemberAdd', guildMember =>{
+    let welcomeRole = guildMember.guild.roles.cache.find(role => role.name === '👤 ・ Gamer');
 
-    const joinEmbed = new Discord.MessageEmbed()
-    .setTitle(`**Welkom ${member.user.tag}!**`)
-    .setDescription('Welkom op de MinecraftGamers discord.\n Mocht je vragen hebben kan je altijd een ticket aanmaken.')
-    .setThumbnail(member.user.displayAvatarURL())
-    .setColor("#004b96")
-    .setFooter("MinecraftGamers", client.user.displayAvatarURL())
-    .setTimestamp();
-
-    channel.send(joinEmbed);
-  });
+    guildMember.roles.add.add(welcomeRole);
+    guildMember.guild.channels.cache.get('773965123320021015').send('Welkom <@${guildMember.user.id}> in de Minecraft Gamers NL/BE discord.')
+});
 
 client.on('message', async message => {
     if(message.author.bot) return;
