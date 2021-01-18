@@ -25,7 +25,7 @@ client.on('ready', () => {
 });
 
 client.on('guildMemberAdd', member => {
-    const channel = member.guild.channels.cache.find(ch => ch.name === 'join-log');
+    const channel = member.guild.channels.cache.find(ch => ch.name === '《👋》welkom');
     if (!channel) return console.log('Er is iemand nieuws gejoined, maar het #join-log kanaal is niet aanwezig dus er is geen welkomstbericht verstuurd.');
 
     const joinEmbed = new Discord.MessageEmbed()
